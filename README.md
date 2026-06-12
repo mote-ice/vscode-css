@@ -110,12 +110,12 @@ custom_css/
   "custom_css_hot_reload.hotReloadMode": "onSave",
   "custom_css_hot_reload.imports": [
     "file:///Users/***/.vscode/custom_css/vars.css",
+    "file:///Users/***/.vscode/custom_css/local.css",
     "file:///Users/***/.vscode/custom_css/basic.css",
     "file:///Users/***/.vscode/custom_css/activitybar.css",
     "file:///Users/***/.vscode/custom_css/sidebar.css",
     "file:///Users/***/.vscode/custom_css/editor.css",
-    "file:///Users/***/.vscode/custom_css/auxiliarybar.css",
-    "file:///Users/***/.vscode/custom_css/local.css"
+    "file:///Users/***/.vscode/custom_css/auxiliarybar.css"
   ],
   "workbench.colorCustomizations": {
     "[Dark+]": {
