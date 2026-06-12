@@ -84,5 +84,18 @@
   .content {
     width: 100% !important;
     height: calc(100% - 35px) !important;
+
+    .split-view-view {
+      width: 100% !important;
+
+      .monaco-editor,
+      .overflow-guard {
+        width: 100% !important;
+      }
+
+      .editor-scrollable {
+        width: calc(100% - 20px) !important;
+      }
+    }
   }
 }
