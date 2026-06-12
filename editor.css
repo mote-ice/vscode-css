@@ -49,6 +49,20 @@
       border-radius: 9999px !important;
       overflow: hidden;
     }
+
+    /* tab */
+    .tabs-and-actions-container {
+
+      .tabs-container {
+        .tab:nth-child(1) {
+          padding-left: 16px !important;
+        }
+      }
+
+      .editor-actions {
+        padding-right: 16px !important;
+      }
+    }
   }
 }
 
