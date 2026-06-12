@@ -66,7 +66,7 @@
         border: 2px solid currentColor;
         border-radius: 50%;
 
-        background-image: url("https://tcs-devops.aliyuncs.com/thumbnail/112n010c1a6f8a8a514f31d2cdee28cb8803/w/200/h/200");
+        background-image: var(--ice-user-avatar) !important;
         background-size: cover;
 
         content: "" !important;

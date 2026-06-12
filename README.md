@@ -86,7 +86,20 @@ custom_css/
 --ice-widget-radius: 14px;   /* 组件窗口圆角 */
 --ice-panel-radius: 24px;    /* 面板圆角 */
 --ice-panel-gap: 6px;        /* 面板间距 */
+--ice-user-avatar: none;     /* 用户头像，默认为 none */
 ```
+
+### 本地覆盖（推荐）
+
+`vars.css` 中的 `--ice-user-avatar` 默认为 `none`。如需设置个人头像，请在项目根目录创建 `local.css`（此文件已被 `.gitignore` 忽略），内容如下：
+
+```css
+.monaco-workbench {
+  --ice-user-avatar: url("https://your-avatar-url");
+}
+```
+
+然后确保 `local.css` 在 `custom_css_hot_reload.imports` 中位于 `vars.css` 之后即可。
 
 ## 配置示例
 
@@ -101,7 +114,8 @@ custom_css/
     "file:///Users/***/.vscode/custom_css/activitybar.css",
     "file:///Users/***/.vscode/custom_css/sidebar.css",
     "file:///Users/***/.vscode/custom_css/editor.css",
-    "file:///Users/***/.vscode/custom_css/auxiliarybar.css"
+    "file:///Users/***/.vscode/custom_css/auxiliarybar.css",
+    "file:///Users/***/.vscode/custom_css/local.css"
   ],
   "workbench.colorCustomizations": {
     "[Dark+]": {

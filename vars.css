@@ -26,6 +26,8 @@
   --ice-islands-border-style: solid;
   --ice-islands-border-color: rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.03) rgba(255, 255, 255, 0.03) rgba(255, 255, 255, 0.08);
 
+  /** 用户头像（默认为 none，用户可在本地覆盖） */
+  --ice-user-avatar: none;
   /** 编辑器字体配置 */
   --vscode-font-family:
     var(--ice-font-x), var(--ice-font-zh), -apple-system, BlinkMacSystemFont,
