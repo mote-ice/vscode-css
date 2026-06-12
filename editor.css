@@ -1,0 +1,74 @@
+/*
+ * 编辑器主体区域
+ */
+.part.editor {
+  height: calc(100% - 1px);
+  margin: 0 var(--ice-panel-gap);
+
+  /* border: var(--ice-islands-border-width) var(--ice-islands-border-style);
+  border-color: var(--ice-islands-border-color); */
+  border-radius: var(--ice-panel-radius);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  .content {
+    width: 100% !important;
+
+    .monaco-editor,
+    .overflow-guard {
+      width: 100% !important;
+
+      .editor-scrollable {
+        width: calc(100% - 70px) !important;
+      }
+    }
+
+    /* 编辑区域的浮层 */
+    .monaco-resizable-hover {
+      border: var(--ice-islands-border-width) var(--ice-islands-border-style);
+      border-color: var(--ice-islands-border-color);
+      border-radius: var(--ice-widget-radius);
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    /* 编辑区域的滚动条容器 */
+    .editor-scrollable>.scrollbar.vertical {
+      height: calc(100% - var(--ice-panel-radius)) !important;
+      border-radius: 9999px !important;
+      overflow: hidden;
+
+      .slider {
+        transform: translate3d(0, calc(var(--ice-panel-radius) * -1), 0) !important;
+      }
+    }
+
+    .editor-scrollable>.scrollbar.horizontal {
+      width: calc(100% - var(--ice-panel-radius)) !important;
+      border-radius: 9999px !important;
+      overflow: hidden;
+    }
+  }
+}
+
+/*
+ * 编辑器主体下方区域
+ */
+.part.panel.bottom {
+  height: calc(100% - var(--ice-panel-gap) - 2px);
+  margin: var(--ice-panel-gap) var(--ice-panel-gap) 0 var(--ice-panel-gap);
+
+  /* border: var(--ice-islands-border-width) var(--ice-islands-border-style);
+  border-color: var(--ice-islands-border-color); */
+  border-radius: var(--ice-panel-radius);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  .content {
+    width: 100% !important;
+    height: calc(100% - 35px) !important;
+  }
+}

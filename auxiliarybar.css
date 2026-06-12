@@ -1,0 +1,47 @@
+/*
+ * 编辑器右侧辅助栏
+ */
+.part.auxiliarybar.right {
+  height: calc(100% - 1px);
+  margin: 0 var(--ice-panel-gap);
+
+  border: var(--ice-islands-border-width) var(--ice-islands-border-style);
+  border-color: var(--ice-islands-border-color);
+  border-radius: var(--ice-panel-radius);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  .content {
+    width: 100% !important;
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    .composite.viewlet {
+      .welcome-view-content {
+        width: 100% !important;
+      }
+    }
+
+    .pane-header.actions-always-visible {
+      padding: 0 0 0 var(--ice-panel-gap);
+      border-radius: var(--ice-panel-radius);
+      border: unset !important;
+      background-color: var(--vscode-input-background) !important;
+    }
+
+    .welcome-view-content {
+      width: 100% !important;
+    }
+
+    /** vs 插件：Project Manager */
+    .monaco-decoration-itemBadge-8stl89::after {
+      content: var(--vscode-icon-check-compact-content);
+
+      font-size: 16px;
+      font-family: var(--vscode-icon-check-compact-font-family);
+    }
+  }
+}

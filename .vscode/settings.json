@@ -1,0 +1,6 @@
+{
+  "commentTranslate.hover.enabled": false,
+  "explorer.fileNesting.patterns": {
+    "index.css": "*.css"
+  }
+}

@@ -1,0 +1,76 @@
+/*
+ * 编辑器左侧活动栏
+ */
+.part.activitybar.left {
+  height: calc(100% - 1px);
+  margin: 0 var(--ice-panel-gap) 0 0;
+
+  background-color: transparent !important;
+
+  overflow: hidden;
+
+  .content {
+    height: 100% !important;
+    /* padding-bottom: calc(var(--ice-panel-gap) * 1); */
+    box-sizing: border-box;
+
+    .composite-bar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 0 var(--ice-panel-radius) var(--ice-panel-radius) 0;
+    }
+
+    .monaco-action-bar.vertical {
+      width: 100%;
+      padding: 8px 4px 8px 2px;
+
+      border: var(--ice-islands-border-width) var(--ice-islands-border-style);
+      border-left-width: 0;
+      border-color: var(--ice-islands-border-color);
+      border-radius: 0 var(--ice-panel-radius) var(--ice-panel-radius) 0;
+      box-shadow: inset 0 1px 3px 0 rgba(255, 255, 255, 0.06),
+        0 1px 4px 0 rgba(0, 0, 0, 0.3);
+      background-color: var(--vscode-sideBar-background);
+
+      overflow: hidden;
+      box-sizing: border-box;
+
+      .actions-container {
+        width: 100%;
+
+        .action-item {
+          width: 100%;
+
+          .action-label {
+            width: 100% !important;
+          }
+
+          .action-label:not(.codicon) {
+            padding: unset;
+          }
+        }
+      }
+    }
+
+    /* ============== 用户 ============== */
+    .codicon-accounts-view-bar-icon {
+      font-size: 24px !important;
+
+      &:before {
+        display: block;
+        width: calc(max(1em, 26px) - 6px);
+        height: calc(max(1em, 26px) - 6px);
+        padding: 0 !important;
+
+        border: 2px solid currentColor;
+        border-radius: 50%;
+
+        background-image: url("https://tcs-devops.aliyuncs.com/thumbnail/112n010c1a6f8a8a514f31d2cdee28cb8803/w/200/h/200");
+        background-size: cover;
+
+        content: "" !important;
+      }
+    }
+  }
+}

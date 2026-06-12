@@ -1,0 +1,39 @@
+/*
+ * 编辑器左侧导航栏
+ */
+.part.sidebar.left {
+  height: calc(100% - 1px);
+  margin: 0 var(--ice-panel-gap);
+
+  border: var(--ice-islands-border-width) var(--ice-islands-border-style);
+  border-color: var(--ice-islands-border-color);
+  border-radius: var(--ice-panel-radius);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  .content {
+    width: 100% !important;
+    padding: 0 16px;
+
+    box-sizing: border-box;
+
+    .composite.viewlet {
+      .header {
+        padding: 4px 0 6px 0;
+      }
+
+      .welcome-view-content {
+        width: 100% !important;
+      }
+    }
+
+    .pane-header.extension-view-header {
+      padding: 0 0 0 var(--ice-panel-gap);
+      border-radius: var(--ice-panel-radius);
+      border: unset !important;
+      background-color: var(--vscode-input-background) !important;
+    }
+  }
+}

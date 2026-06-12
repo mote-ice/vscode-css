@@ -1,0 +1,199 @@
+.monaco-workbench {
+  font-family: var(--vscode-font-family) !important;
+  background-color: var(--vscode-titleBar-activeBackground) !important;
+}
+
+/* 滚动条 */
+.monaco-workbench {
+  .scrollbar.vertical {
+
+    .slider {
+      left: 4px !important;
+      width: var(--ice-panel-gap) !important;
+      border-radius: 9999px !important;
+    }
+  }
+
+  .scrollbar.horizontal {
+
+    .slider {
+      top: 4px !important;
+      height: var(--ice-panel-gap) !important;
+      border-radius: 9999px !important;
+    }
+  }
+}
+
+/* 列表 */
+.monaco-workbench {
+
+  .monaco-list-row[role="listitem"],
+  .monaco-list-row[role="treeitem"] {
+    border-radius: calc(var(--ice-item-radius) * 2);
+  }
+
+  /** 插件市场列表的图标 */
+  .monaco-list-row[role="listitem"] {
+    .extension-icon {
+      padding-right: 14px;
+
+      .icon {
+        padding-right: 0;
+
+        border: 1px solid currentColor;
+        border-radius: 999px;
+
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+/* 窗口顶部命令框 */
+.monaco-workbench {
+  .action-item.command-center-center {
+    border-radius: var(--ice-input-radius) !important;
+  }
+}
+
+/* 输入框 - 插件市场 */
+.monaco-workbench {
+  .suggest-input-container {
+    padding: 2px calc(var(--ice-input-radius) / 2 + 2px);
+    border-radius: var(--ice-input-radius);
+  }
+
+  .extensions-search-actions-container {
+    padding-right: calc(var(--ice-input-radius) + 2px);
+  }
+}
+
+/* 输入框 - 搜索栏 */
+.monaco-workbench {
+  .monaco-inputbox {
+    padding: 0 calc(var(--ice-input-radius) / 2 + 2px);
+    border-radius: var(--ice-input-radius);
+  }
+}
+
+/* 输入框 - 替换栏 */
+.monaco-workbench {
+  .replace-container {
+    width: calc(100% - 18px);
+    margin-right: 26px;
+
+    .replace-input {
+      flex: 1 1 auto;
+    }
+
+    .monaco-action-bar {
+      flex: 0 0 auto;
+    }
+
+    .monaco-findInput {
+      width: 100% !important;
+    }
+  }
+}
+
+/* 下拉框 */
+.monaco-workbench {
+  .monaco-select-box {
+    padding: 2px 24px 2px calc(var(--ice-input-radius) / 2 + 2px) !important;
+    border-radius: var(--ice-input-radius) !important;
+  }
+}
+
+/*
+ * 面板弹窗
+ */
+.monaco-workbench {
+  .quick-input-widget {
+    border-radius: var(--ice-widget-radius);
+    overflow: hidden;
+
+    .quick-input-filter {
+      .monaco-inputbox {
+        border-radius: calc(var(--ice-item-radius) * 2);
+      }
+    }
+
+    .quick-input-list {
+      .monaco-list-row {
+        border-radius: calc(var(--ice-item-radius) * 2);
+      }
+    }
+
+    .quick-input-list .quick-input-list-entry {
+      height: 100%;
+
+      .quick-input-list-rows {
+        justify-content: center;
+      }
+
+      .quick-input-list-separator {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .quick-input-list-entry-action-bar {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/** 树形 icon */
+.monaco-workbench {
+  .monaco-tl-twistie.collapsed:before {
+    transform: rotate(0deg);
+  }
+
+  .codicon-tree-item-expanded:before {
+    content: var(--vscode-icon-arrow-right-content);
+    font-weight: 900;
+    font-size: 14px;
+
+    transform: rotate(45deg);
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
+}
+
+/** 颜色面板（Color Highlight 插件） */
+.monaco-workbench {
+  .colorpicker-color-decoration {
+    width: 0.9em;
+    height: 0.9em;
+    line-height: 0.7em;
+    border-radius: 50%;
+  }
+}
+
+/*
+ * 编辑器底部状态栏
+ */
+.part.statusbar {
+  background-color: transparent !important;
+
+  .items-container>.statusbar-item[aria-label="remote"] {
+    min-width: 52px;
+
+    color: var(--vscode-button-foreground);
+    background-color: var(--vscode-button-background);
+
+    .statusbar-item-label {
+      justify-content: center;
+      margin: 0;
+    }
+  }
+}
+
+/*
+ * 右下角通知浮层
+ */
+.notifications-center.bottom-right {
+  border: var(--ice-islands-border-width) var(--ice-islands-border-style) !important;
+  border-color: var(--ice-islands-border-color) !important;
+  border-radius: var(--ice-widget-radius);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.4);
+}
