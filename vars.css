@@ -11,24 +11,24 @@
   --ice-font-k: "Monaspace Krypton";
   /* 中文字体 */
   --ice-font-zh: "Maple Mono NF CN";
-  /** 输入框圆角系数 */
+  /* 输入框圆角系数 */
   --ice-input-radius: 12px;
-  /** 列表项圆角系数 */
+  /* 列表项圆角系数 */
   --ice-item-radius: 6px;
-  /** 组件窗口圆角系数 */
+  /* 组件窗口圆角系数 */
   --ice-widget-radius: 14px;
-  /** 面板/弹窗圆角系数 */
+  /* 面板/弹窗圆角系数 */
   --ice-panel-radius: 24px;
-  /** 面板/弹窗间距 */
+  /* 面板/弹窗间距 */
   --ice-panel-gap: 6px;
-  /** 浮岛边框配置 */
+  /* 浮岛边框配置 */
   --ice-islands-border-width: 1px;
   --ice-islands-border-style: solid;
   --ice-islands-border-color: rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.03) rgba(255, 255, 255, 0.03) rgba(255, 255, 255, 0.08);
 
-  /** 用户头像（默认为 none，用户可在本地覆盖） */
+  /* 用户头像（默认为 none，用户可在本地覆盖） */
   --ice-user-avatar: none;
-  /** 编辑器字体配置 */
+  /* 编辑器字体配置 */
   --vscode-font-family:
     var(--ice-font-x), var(--ice-font-zh), -apple-system, BlinkMacSystemFont,
     PingFang SC, Hiragino Sans GB, sans-serif;

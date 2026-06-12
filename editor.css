@@ -1,6 +1,6 @@
-/*
+/* ================================================================
  * 编辑器主体区域
- */
+ * ================================================================ */
 .part.editor {
   height: calc(100% - 1px);
   margin: 0 var(--ice-panel-gap);
@@ -25,7 +25,7 @@
       }
     }
 
-    /* 编辑区域的浮层 */
+    /* 编辑区浮层 */
     .monaco-resizable-hover {
       border: var(--ice-islands-border-width) var(--ice-islands-border-style);
       border-color: var(--ice-islands-border-color);
@@ -33,7 +33,7 @@
       box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
     }
 
-    /* 编辑区域的滚动条容器 */
+    /* 编辑区滚动条 */
     .editor-scrollable>.scrollbar.vertical {
       height: calc(100% - var(--ice-panel-radius)) !important;
       border-radius: 9999px !important;
@@ -52,9 +52,9 @@
   }
 }
 
-/*
- * 编辑器主体下方区域
- */
+/* ================================================================
+ * 编辑器底部面板（终端 / 输出 / 问题 等）
+ * ================================================================ */
 .part.panel.bottom {
   height: calc(100% - var(--ice-panel-gap) - 2px);
   margin: var(--ice-panel-gap) var(--ice-panel-gap) 0 var(--ice-panel-gap);

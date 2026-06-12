@@ -1,6 +1,6 @@
-/*
+/* ================================================================
  * 编辑器左侧导航栏
- */
+ * ================================================================ */
 .part.sidebar.left {
   height: calc(100% - 1px);
   margin: 0 var(--ice-panel-gap);
@@ -29,6 +29,7 @@
       }
     }
 
+    .pane-header.actions-always-visible,
     .pane-header.extension-view-header {
       padding: 0 0 0 var(--ice-panel-gap);
       border-radius: var(--ice-panel-radius);

@@ -1,6 +1,6 @@
-/*
+/* ================================================================
  * 编辑器右侧辅助栏
- */
+ * ================================================================ */
 .part.auxiliarybar.right {
   height: calc(100% - 1px);
   margin: 0 var(--ice-panel-gap);
@@ -36,7 +36,7 @@
       width: 100% !important;
     }
 
-    /** vs 插件：Project Manager */
+    /* Project Manager 插件图标 */
     .monaco-decoration-itemBadge-8stl89::after {
       content: var(--vscode-icon-check-compact-content);
 

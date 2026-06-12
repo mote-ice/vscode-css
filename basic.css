@@ -1,10 +1,10 @@
 .monaco-workbench {
   font-family: var(--vscode-font-family) !important;
   background-color: var(--vscode-titleBar-activeBackground) !important;
-}
 
-/* 滚动条 */
-.monaco-workbench {
+  /* ================================================================
+   * 滚动条
+   * ================================================================ */
   .scrollbar.vertical {
 
     .slider {
@@ -22,17 +22,17 @@
       border-radius: 9999px !important;
     }
   }
-}
 
-/* 列表 */
-.monaco-workbench {
+  /* ================================================================
+   * 列表
+   * ================================================================ */
 
   .monaco-list-row[role="listitem"],
   .monaco-list-row[role="treeitem"] {
     border-radius: calc(var(--ice-item-radius) * 2);
   }
 
-  /** 插件市场列表的图标 */
+  /* 插件市场列表的图标 */
   .monaco-list-row[role="listitem"] {
     .extension-icon {
       padding-right: 14px;
@@ -47,17 +47,19 @@
       }
     }
   }
-}
 
-/* 窗口顶部命令框 */
-.monaco-workbench {
+  /* ================================================================
+   * 窗口顶部命令框
+   * ================================================================ */
   .action-item.command-center-center {
     border-radius: var(--ice-input-radius) !important;
   }
-}
 
-/* 输入框 - 插件市场 */
-.monaco-workbench {
+  /* ================================================================
+   * 输入框
+   * ================================================================ */
+
+  /* 插件市场 */
   .suggest-input-container {
     padding: 2px calc(var(--ice-input-radius) / 2 + 2px);
     border-radius: var(--ice-input-radius);
@@ -66,18 +68,14 @@
   .extensions-search-actions-container {
     padding-right: calc(var(--ice-input-radius) + 2px);
   }
-}
 
-/* 输入框 - 搜索栏 */
-.monaco-workbench {
+  /* 搜索栏 */
   .monaco-inputbox {
     padding: 0 calc(var(--ice-input-radius) / 2 + 2px);
     border-radius: var(--ice-input-radius);
   }
-}
 
-/* 输入框 - 替换栏 */
-.monaco-workbench {
+  /* 替换栏 */
   .replace-container {
     width: calc(100% - 18px);
     margin-right: 26px;
@@ -94,20 +92,26 @@
       width: 100% !important;
     }
   }
-}
 
-/* 下拉框 */
-.monaco-workbench {
+  /* 源代码管理 */
+  .scm-view .scm-editor {
+    padding: 0 calc(var(--ice-input-radius) / 2 + 2px);
+    border-radius: var(--ice-input-radius);
+
+    overflow: hidden;
+  }
+
+  /* ================================================================
+   * 下拉框
+   * ================================================================ */
   .monaco-select-box {
     padding: 2px 24px 2px calc(var(--ice-input-radius) / 2 + 2px) !important;
     border-radius: var(--ice-input-radius) !important;
   }
-}
 
-/*
- * 面板弹窗
- */
-.monaco-workbench {
+  /* ================================================================
+   * 命令面板弹窗
+   * ================================================================ */
   .quick-input-widget {
     border-radius: var(--ice-widget-radius);
     overflow: hidden;
@@ -141,10 +145,10 @@
       }
     }
   }
-}
 
-/** 树形 icon */
-.monaco-workbench {
+  /* ================================================================
+   * 树形展开图标
+   * ================================================================ */
   .monaco-tl-twistie.collapsed:before {
     transform: rotate(0deg);
   }
@@ -157,10 +161,10 @@
     transform: rotate(45deg);
     transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   }
-}
 
-/** 颜色面板（Color Highlight 插件） */
-.monaco-workbench {
+  /* ================================================================
+   * 颜色面板（Color Highlight 插件）
+   * ================================================================ */
   .colorpicker-color-decoration {
     width: 0.9em;
     height: 0.9em;
@@ -169,9 +173,9 @@
   }
 }
 
-/*
+/* ================================================================
  * 编辑器底部状态栏
- */
+ * ================================================================ */
 .part.statusbar {
   background-color: transparent !important;
 
@@ -188,9 +192,9 @@
   }
 }
 
-/*
+/* ================================================================
  * 右下角通知浮层
- */
+ * ================================================================ */
 .notifications-center.bottom-right {
   border: var(--ice-islands-border-width) var(--ice-islands-border-style) !important;
   border-color: var(--ice-islands-border-color) !important;
