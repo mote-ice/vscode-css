@@ -8,7 +8,7 @@
   border: var(--ice-islands-border-width) var(--ice-islands-border-style);
   border-color: var(--ice-islands-border-color);
   border-radius: var(--ice-panel-radius);
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: var(--ice-islands-shadow);
 
   overflow: hidden;
   box-sizing: border-box;

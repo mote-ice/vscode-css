@@ -25,6 +25,8 @@
   --ice-islands-border-width: 1px;
   --ice-islands-border-style: solid;
   --ice-islands-border-color: rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.03) rgba(255, 255, 255, 0.03) rgba(255, 255, 255, 0.08);
+  /* 浮岛阴影 */
+  --ice-islands-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 
   /* 用户头像（默认为 none，用户可在本地覆盖） */
   --ice-user-avatar: none;
