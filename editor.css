@@ -63,6 +63,11 @@
         padding-right: 16px !important;
       }
     }
+
+    /* 编辑区装订线 */
+    .monaco-editor .ced-1-TextEditorDecorationType31-1 {
+      text-decoration: none;
+    }
   }
 }
 
