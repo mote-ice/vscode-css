@@ -32,8 +32,11 @@
     border-radius: calc(var(--ice-item-radius) * 2);
   }
 
-  /* 插件市场列表的图标 */
+  /* 插件市场列表 */
   .monaco-list-row[role="listitem"] {
+    height: 68px !important;
+    margin-top: 4px;
+
     .extension-icon {
       padding-right: 14px;
 
@@ -116,6 +119,15 @@
     border-radius: var(--ice-widget-radius);
     overflow: hidden;
 
+    &::before {
+      position: fixed;
+      inset: 0;
+      background-color: rgb(from var(--vscode-titleBar-activeBackground) r g b / 10%);
+      backdrop-filter: blur(2px);
+
+      content: "";
+    }
+
     .quick-input-filter {
       .monaco-inputbox {
         border-radius: calc(var(--ice-item-radius) * 2);
@@ -182,8 +194,8 @@
   .items-container>.statusbar-item[aria-label="remote"] {
     min-width: 52px;
 
-    color: var(--vscode-button-foreground);
-    background-color: var(--vscode-button-background);
+    color: var(--vscode-statusBarItem-remoteForeground, --vscode-button-foreground);
+    background-color: var(--vscode-statusBarItem-remoteBackground, --vscode-button-background);
 
     .statusbar-item-label {
       justify-content: center;

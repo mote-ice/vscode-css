@@ -20,6 +20,10 @@
     box-sizing: border-box;
 
     .composite.viewlet {
+      &>.header {
+        height: 38px !important;
+      }
+
       .header {
         padding: 4px 0 6px 0;
       }
