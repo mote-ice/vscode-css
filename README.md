@@ -73,6 +73,7 @@ custom_css/
 ├── sidebar.css        # 左侧导航栏样式
 ├── editor.css         # 编辑器主体及底部面板样式
 ├── auxiliarybar.css   # 右侧辅助栏样式
+├── local.css           # 本地个人配置（已被 .gitignore 忽略）
 └── 1.png              # 效果截图
 ```
 
@@ -91,11 +92,31 @@ custom_css/
 
 ### 本地覆盖（推荐）
 
-`vars.css` 中的 `--ice-user-avatar` 默认为 `none`。如需设置个人头像，请在项目根目录创建 `local.css`（此文件已被 `.gitignore` 忽略），内容如下：
+`vars.css` 中的 `--ice-user-avatar` 默认为 `none`，且 `activitybar.css` 中不含头像图标样式。如需启用个人头像，请在项目根目录创建 `local.css`（此文件已被 `.gitignore` 忽略），内容如下：
 
 ```css
 .monaco-workbench {
   --ice-user-avatar: url("https://your-avatar-url");
+
+  /* 用户头像 */
+  .codicon-accounts-view-bar-icon {
+    font-size: 24px !important;
+
+    &:before {
+      display: block;
+      width: calc(max(1em, 26px) - 6px);
+      height: calc(max(1em, 26px) - 6px);
+      padding: 0 !important;
+
+      border: 2px solid currentColor;
+      border-radius: 50%;
+
+      background-image: var(--ice-user-avatar) !important;
+      background-size: cover;
+
+      content: "" !important;
+    }
+  }
 }
 ```
 

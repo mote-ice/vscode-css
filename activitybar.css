@@ -50,25 +50,5 @@
         }
       }
     }
-
-    /* 用户头像 */
-    .codicon-accounts-view-bar-icon {
-      font-size: 24px !important;
-
-      &:before {
-        display: block;
-        width: calc(max(1em, 26px) - 6px);
-        height: calc(max(1em, 26px) - 6px);
-        padding: 0 !important;
-
-        border: 2px solid currentColor;
-        border-radius: 50%;
-
-        background-image: var(--ice-user-avatar) !important;
-        background-size: cover;
-
-        content: "" !important;
-      }
-    }
   }
 }

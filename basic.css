@@ -220,4 +220,15 @@
   border-color: var(--ice-islands-border-color) !important;
   border-radius: var(--ice-widget-radius);
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.4);
+
+  right: calc(var(--ice-panel-gap) * 2);
+  bottom: calc(var(--ice-panel-gap) * 4);
+
+  .monaco-list-row[role="dialog"] {
+    border-radius: 0;
+
+    &:last-child {
+      border-radius: 0px 0px var(--ice-widget-radius) var(--ice-widget-radius) !important;
+    }
+  }
 }
