@@ -27,26 +27,30 @@
    * 列表
    * ================================================================ */
 
-  .monaco-list-row[role="listitem"],
-  .monaco-list-row[role="treeitem"] {
-    border-radius: calc(var(--ice-item-radius) * 2);
-  }
+  .part.sidebar.left,
+  .part.auxiliarybar.right {
 
-  /* 插件市场列表 */
-  .monaco-list-row[role="listitem"] {
-    height: 68px !important;
-    margin-top: 4px;
+    .monaco-list-row[role="listitem"],
+    .monaco-list-row[role="treeitem"] {
+      border-radius: calc(var(--ice-item-radius) * 2);
+    }
 
-    .extension-icon {
-      padding-right: 14px;
+    /* 插件市场列表 */
+    .monaco-list-row[role="listitem"] {
+      height: 68px !important;
+      margin-top: 4px;
 
-      .icon {
-        padding-right: 0;
+      .extension-icon {
+        padding-right: 14px;
 
-        border: 1px solid currentColor;
-        border-radius: 999px;
+        .icon {
+          padding-right: 0;
 
-        object-fit: cover;
+          border: 1px solid currentColor;
+          border-radius: 999px;
+
+          object-fit: cover;
+        }
       }
     }
   }
