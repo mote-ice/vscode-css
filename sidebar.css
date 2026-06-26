@@ -24,6 +24,10 @@
         height: 38px !important;
       }
 
+      &>.header:has(.notification-container) {
+        height: auto !important;
+      }
+
       .header {
         padding: 4px 0 6px 0;
       }
