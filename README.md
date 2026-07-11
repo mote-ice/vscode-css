@@ -1,15 +1,36 @@
 # VSCode Custom CSS - 浮岛风格
 
-一套基于 VSCode **Dark+** 主题的 Custom CSS 样式，将 VSCode 的各功能面板改造为独立浮岛（Floating Islands）风格——每个面板拥有独立的圆角、边框和阴影，整体更加现代精致。
+一套基于 VSCode Custom CSS 的浮岛（Floating Islands）风格主题样式，将 VSCode 的各功能面板改造为独立浮岛——每个面板拥有统一的圆角、边框和阴影，整体更加现代精致。
 
-![screenshot](1.png)
+已适配以下三款主题：
+
+| 主题 | 说明 |
+| --- | --- |
+| **Dark+** | VSCode 内置默认深色主题 |
+| **Everforest Pro Dark Vibrant** | 自然绿色调的深色主题 |
+| **Flux Twilight** | 紫色调的深色主题 |
 
 ## 效果预览
+
+### Dark+
+
+![Dark+](Dark+.png)
+
+### Everforest Pro Dark Vibrant
+
+![Everforest Pro Dark Vibrant](Everforest%20Pro%20Dark%20Vibrant.png)
+
+### Flux Twilight
+
+![Flux Twilight](Flux%20Twilight.png)
+
+## 特性
 
 - **活动栏**、**侧边栏**、**编辑器**、**辅助栏** 各自独立为"浮岛"，带有统一的圆角与阴影
 - 自定义滚动条样式，细窄圆角滑块
 - 输入框、下拉框、命令面板统一圆角风格
 - 插件市场图标圆形裁剪
+- 命令面板、设置面板弹窗毛玻璃遮罩背景
 - 通知浮层带毛玻璃边框
 - 底部状态栏透明化，Remote 指示器按钮风格
 
@@ -53,11 +74,14 @@ brew install --cask font-maple-mono-nf-cn
 
 ### 3. 主题设置
 
-建议搭配 VSCode 内置的 **Dark+** 主题使用：
+本项目适配了三款主题，任选其一即可：
 
 1. 打开命令面板（`Cmd+Shift+P`）
 2. 选择 `Preferences: Color Theme`
-3. 选择 `Dark+` (default-dark-themes)
+3. 选择以下任一主题：
+   - `Dark+`
+   - `Everforest Pro Dark Vibrant`
+   - `Flux Twilight`
 4. 打开命令面板（`Cmd+Shift+P`）
 5. 选择 `Preferences: Product Icon Theme`
 6. 选择 `Default`
@@ -67,27 +91,33 @@ brew install --cask font-maple-mono-nf-cn
 ```
 custom_css/
 ├── index.css          # 入口文件，汇总所有样式
-├── vars.css           # CSS 变量定义（字体、圆角、间距、边框）
+├── vars.css           # CSS 变量定义（字体、圆角、间距、边框、阴影）
 ├── basic.css          # 全局基础样式（滚动条、输入框、下拉框、命令面板、通知等）
 ├── activitybar.css    # 左侧活动栏样式
 ├── sidebar.css        # 左侧导航栏样式
 ├── editor.css         # 编辑器主体及底部面板样式
 ├── auxiliarybar.css   # 右侧辅助栏样式
-├── local.css           # 本地个人配置（已被 .gitignore 忽略）
-└── 1.png              # 效果截图
+├── local.css          # 本地个人配置（已被 .gitignore 忽略）
+├── Dark+.png                  # Dark+ 主题效果截图
+├── Everforest Pro Dark Vibrant.png  # Everforest 主题效果截图
+├── Flux Twilight.png          # Flux Twilight 主题效果截图
+└── .gitignore         # Git 忽略配置
 ```
 
 ## 自定义
 
-你可以通过修改 `vars.css` 中的 CSS 变量来调整整体风格：
+### CSS 变量
+
+通过修改 `vars.css` 中的 CSS 变量可以调整整体风格：
 
 ```css
---ice-input-radius: 12px;    /* 输入框圆角 */
---ice-item-radius: 6px;      /* 列表项圆角 */
---ice-widget-radius: 14px;   /* 组件窗口圆角 */
---ice-panel-radius: 24px;    /* 面板圆角 */
---ice-panel-gap: 6px;        /* 面板间距 */
---ice-user-avatar: none;     /* 用户头像，默认为 none */
+--ice-input-radius: 12px;     /* 输入框圆角 */
+--ice-item-radius: 6px;       /* 列表项圆角 */
+--ice-widget-radius: 14px;    /* 组件窗口圆角 */
+--ice-panel-radius: 24px;     /* 面板圆角 */
+--ice-panel-gap: 6px;         /* 面板间距 */
+--ice-user-avatar: none;      /* 用户头像，默认为 none */
+--ice-islands-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);  /* 浮岛阴影 */
 ```
 
 ### 本地覆盖（推荐）
@@ -120,11 +150,11 @@ custom_css/
 }
 ```
 
-然后确保 `local.css` 在 `custom_css_hot_reload.imports` 中位于 `vars.css` 之后即可。
+确保 `local.css` 在 `custom_css_hot_reload.imports` 中位于 `vars.css` 之后即可生效。
 
 ## 配置示例
 
-以下是完整的 `settings.json` 配置示例，可直接参考或调整后使用：
+以下是完整的 `settings.json` 配置示例，包含三款主题的颜色自定义，可直接参考或调整后使用：
 
 ```json
 {
@@ -145,12 +175,46 @@ custom_css/
       "projectManager.sideBar.currentProjectHighlightForeground": "#007acc",
       "statusBarItem.remoteBackground": "#007acc",
       "titleBar.inactiveBackground": "#3c3c3c"
+    },
+    "[Everforest Pro Dark Vibrant]": {
+      "activityBar.border": "#00000000",
+      "focusBorder": "#00000000",
+      "input.background": "#2E383C",
+      "projectManager.sideBar.currentProjectHighlightForeground": "#a7c080",
+      "statusBar.border": "#00000000",
+      "tab.activeBackground": "#2E383C",
+      "tab.activeBorder": "#00000000",
+      "titleBar.activeBackground": "#374145",
+      "titleBar.border": "#00000000",
+      "titleBar.inactiveBackground": "#374145"
+    },
+    "[Flux Twilight]": {
+      "activityBar.activeBorder": "#a46cf9",
+      "breadcrumb.background": "#1e2233",
+      "editor.background": "#1e2233",
+      "editorGroup.emptyBackground": "#1e2233",
+      "editorGutter.background": "#1e2233",
+      "editorStickyScroll.background": "#1e2233",
+      "focusBorder": "#00000000",
+      "panel.background": "#1e2233",
+      "panelTitle.activeBorder": "#a46cf9",
+      "progressBar.background": "#a46cf9",
+      "projectManager.sideBar.currentProjectHighlightForeground": "#a46cf9",
+      "statusBar.border": "#00000000",
+      "tab.activeBorder": "#00000000",
+      "tab.activeBorderTop": "#00000000",
+      "tab.hoverBackground": "#1e2233",
+      "terminal.background": "#1e2233",
+      "titleBar.activeBackground": "#272b3f",
+      "titleBar.border": "#00000000"
     }
   },
   "workbench.colorTheme": "Dark+",
   "editor.fontFamily": "'Monaspace Neon', 'Maple Mono NF CN', monospace"
 }
 ```
+
+> **说明**：`workbench.colorTheme` 可设置为 `Dark+`、`Everforest Pro Dark Vibrant` 或 `Flux Twilight` 中的任意一个，`workbench.colorCustomizations` 中三款主题的配置互不影响，切换主题时会自动应用对应的颜色覆盖。
 
 ## 鸣谢
 
