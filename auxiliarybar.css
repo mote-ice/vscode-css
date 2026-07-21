@@ -2,47 +2,16 @@
  * 编辑器右侧辅助栏
  * ================================================================ */
 .part.auxiliarybar.right {
-  height: calc(100% - 1px);
-  margin: 0 var(--ice-panel-gap);
-
-  border: var(--ice-islands-border-width) var(--ice-islands-border-style);
-  border-color: var(--ice-islands-border-color);
-  border-radius: var(--ice-panel-radius);
-  box-shadow: var(--ice-islands-shadow);
-
-  overflow: hidden;
-  box-sizing: border-box;
-
   .content {
-    width: 100% !important;
-    margin-top: -4px;
-    padding: 0 16px;
-
-    box-sizing: border-box;
-
-    .composite.viewlet {
-      .welcome-view-content {
-        width: 100% !important;
-      }
-    }
-
     .pane-header.actions-always-visible {
       padding: 0 0 0 var(--ice-panel-gap);
       border-radius: var(--ice-panel-radius);
       border: unset !important;
       background-color: var(--vscode-input-background) !important;
-    }
 
-    .welcome-view-content {
-      width: 100% !important;
-    }
-
-    /* Project Manager 插件图标 */
-    .monaco-decoration-itemBadge-8stl89::after {
-      content: var(--vscode-icon-check-compact-content);
-
-      font-size: 16px;
-      font-family: var(--vscode-icon-check-compact-font-family);
+      &::before {
+        background-color: transparent;
+      }
     }
   }
 }

@@ -2,111 +2,21 @@
  * 编辑器主体区域
  * ================================================================ */
 .part.editor {
-  height: calc(100% - 1px);
-  margin: 0 var(--ice-panel-gap);
-
-  /* border: var(--ice-islands-border-width) var(--ice-islands-border-style);
-  border-color: var(--ice-islands-border-color); */
-  border-radius: var(--ice-panel-radius);
-  box-shadow: var(--ice-islands-shadow);
-
-  overflow: hidden;
-  box-sizing: border-box;
-
   .content {
-    width: 100% !important;
-
-    .monaco-editor,
-    .overflow-guard {
-      width: 100% !important;
-
-      .editor-scrollable {
-        width: calc(100% - 70px) !important;
-      }
-    }
-
-    /* 编辑区浮层 */
-    .monaco-resizable-hover {
-      border: var(--ice-islands-border-width) var(--ice-islands-border-style);
-      border-color: var(--ice-islands-border-color);
-      border-radius: var(--ice-widget-radius);
-      box-shadow: var(--ice-islands-shadow);
-    }
-
-    /* 编辑区滚动条 */
-    .editor-scrollable>.scrollbar.vertical {
-      height: calc(100% - var(--ice-panel-radius)) !important;
-      border-radius: 9999px !important;
-      overflow: hidden;
-
-      .slider {
-        transform: translate3d(0, calc(var(--ice-panel-radius) * -1), 0) !important;
-      }
-    }
-
-    .editor-scrollable>.scrollbar.horizontal {
-      width: calc(100% - var(--ice-panel-radius)) !important;
-      border-radius: 9999px !important;
-      overflow: hidden;
-    }
-
     /* tab */
     .tabs-and-actions-container {
-
       .tabs-container {
-        .tab:nth-child(1) {
-          padding-left: 16px !important;
-        }
-
         .tab {
           .label-name {
             text-transform: uppercase;
           }
         }
       }
-
-      .editor-actions {
-        padding-right: 16px !important;
-      }
     }
 
     /* 编辑区装订线 */
     .monaco-editor [class*="ced-"][class*="-TextEditorDecorationType"] {
       text-decoration: none;
-    }
-  }
-}
-
-/* ================================================================
- * 编辑器底部面板（终端 / 输出 / 问题 等）
- * ================================================================ */
-.part.panel.bottom {
-  height: calc(100% - var(--ice-panel-gap) - 2px);
-  margin: var(--ice-panel-gap) var(--ice-panel-gap) 0 var(--ice-panel-gap);
-
-  /* border: var(--ice-islands-border-width) var(--ice-islands-border-style);
-  border-color: var(--ice-islands-border-color); */
-  border-radius: var(--ice-panel-radius);
-  box-shadow: var(--ice-islands-shadow);
-
-  overflow: hidden;
-  box-sizing: border-box;
-
-  .content {
-    width: 100% !important;
-    height: calc(100% - 35px) !important;
-
-    .split-view-view {
-      width: 100% !important;
-
-      .monaco-editor,
-      .overflow-guard {
-        width: 100% !important;
-      }
-
-      .editor-scrollable {
-        width: calc(100% - 20px) !important;
-      }
     }
   }
 }

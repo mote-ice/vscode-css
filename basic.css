@@ -8,7 +8,6 @@
   .scrollbar.vertical {
 
     .slider {
-      left: 4px !important;
       width: var(--ice-panel-gap) !important;
       border-radius: 9999px !important;
     }
@@ -17,7 +16,6 @@
   .scrollbar.horizontal {
 
     .slider {
-      top: 4px !important;
       height: var(--ice-panel-gap) !important;
       border-radius: 9999px !important;
     }
@@ -30,18 +28,10 @@
   .part.sidebar.left,
   .part.auxiliarybar.right {
 
-    .monaco-list-row[role="listitem"],
-    .monaco-list-row[role="treeitem"] {
-      border-radius: calc(var(--ice-item-radius) * 2);
-    }
-
     /* 插件市场列表 */
     .monaco-list-row[role="listitem"] {
-      height: 68px !important;
-      margin-top: 4px;
 
       .extension-icon {
-        padding-right: 14px;
 
         .icon {
           padding-right: 0;
@@ -60,67 +50,14 @@
    * ================================================================ */
   .action-item.command-center-center {
     border-radius: var(--ice-input-radius) !important;
-  }
-
-  /* ================================================================
-   * 输入框
-   * ================================================================ */
-
-  /* 插件市场 */
-  .suggest-input-container {
-    padding: 2px calc(var(--ice-input-radius) / 2 + 2px);
-    border-radius: var(--ice-input-radius);
-  }
-
-  .extensions-search-actions-container {
-    padding-right: calc(var(--ice-input-radius) + 2px);
-  }
-
-  /* 搜索栏 */
-  .monaco-inputbox {
-    padding: 0 calc(var(--ice-input-radius) / 2 + 2px);
-    border-radius: var(--ice-input-radius);
-  }
-
-  /* 替换栏 */
-  .replace-container {
-    width: calc(100% - 18px);
-    margin-right: 26px;
-
-    .replace-input {
-      flex: 1 1 auto;
-    }
-
-    .monaco-action-bar {
-      flex: 0 0 auto;
-    }
-
-    .monaco-findInput {
-      width: 100% !important;
-    }
-  }
-
-  /* 源代码管理 */
-  .scm-view .scm-editor {
-    padding: 0 calc(var(--ice-input-radius) / 2 + 2px);
-    border-radius: var(--ice-input-radius);
-
-    overflow: hidden;
-  }
-
-  /* ================================================================
-   * 下拉框
-   * ================================================================ */
-  .monaco-select-box {
-    padding: 2px 24px 2px calc(var(--ice-input-radius) / 2 + 2px) !important;
-    border-radius: var(--ice-input-radius) !important;
+    text-transform: uppercase;
   }
 
   /* ================================================================
    * 命令面板弹窗
    * ================================================================ */
   .quick-input-widget {
-    border-radius: var(--ice-widget-radius);
+    border-radius: var(--vscode-cornerRadius-large);
     overflow: hidden;
 
     &::before {
@@ -130,35 +67,6 @@
       backdrop-filter: blur(2px);
 
       content: "";
-    }
-
-    .quick-input-filter {
-      .monaco-inputbox {
-        border-radius: calc(var(--ice-item-radius) * 2);
-      }
-    }
-
-    .quick-input-list {
-      .monaco-list-row {
-        border-radius: calc(var(--ice-item-radius) * 2);
-      }
-    }
-
-    .quick-input-list .quick-input-list-entry {
-      height: 100%;
-
-      .quick-input-list-rows {
-        justify-content: center;
-      }
-
-      .quick-input-list-separator {
-        display: inline-flex;
-        align-items: center;
-      }
-
-      .quick-input-list-entry-action-bar {
-        margin-top: 0;
-      }
     }
   }
 
@@ -220,19 +128,6 @@
  * 右下角通知浮层
  * ================================================================ */
 .notifications-center.bottom-right {
-  border: var(--ice-islands-border-width) var(--ice-islands-border-style) !important;
-  border-color: var(--ice-islands-border-color) !important;
-  border-radius: var(--ice-widget-radius);
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.4);
-
   right: calc(var(--ice-panel-gap) * 2);
   bottom: calc(var(--ice-panel-gap) * 4);
-
-  .monaco-list-row[role="dialog"] {
-    border-radius: 0;
-
-    &:last-child {
-      border-radius: 0px 0px var(--ice-widget-radius) var(--ice-widget-radius) !important;
-    }
-  }
 }

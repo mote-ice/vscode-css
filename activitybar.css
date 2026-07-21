@@ -1,54 +1,6 @@
 /* ================================================================
  * 编辑器左侧活动栏
  * ================================================================ */
-.part.activitybar.left {
-  height: calc(100% - 1px);
-  margin: 0 var(--ice-panel-gap) 0 0;
+/* .part.activitybar.left {
 
-  background-color: transparent !important;
-
-  overflow: hidden;
-
-  .content {
-    height: 100% !important;
-    /* padding-bottom: calc(var(--ice-panel-gap) * 1); */
-    box-sizing: border-box;
-
-    .composite-bar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-radius: 0 var(--ice-panel-radius) var(--ice-panel-radius) 0;
-    }
-
-    .monaco-action-bar.vertical {
-      width: 100%;
-      padding: 8px 4px 8px 2px;
-
-      border: var(--ice-islands-border-width) var(--ice-islands-border-style);
-      border-left-width: 0;
-      border-color: var(--ice-islands-border-color);
-      border-radius: 0 var(--ice-panel-radius) var(--ice-panel-radius) 0;
-      background-color: var(--vscode-sideBar-background);
-
-      overflow: hidden;
-      box-sizing: border-box;
-
-      .actions-container {
-        width: 100%;
-
-        .action-item {
-          width: 100%;
-
-          .action-label {
-            width: 100% !important;
-          }
-
-          .action-label:not(.codicon) {
-            padding: unset;
-          }
-        }
-      }
-    }
-  }
-}
+} */

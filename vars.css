@@ -12,13 +12,9 @@
   /* 中文字体 */
   --ice-font-zh: "Maple Mono NF CN";
   /* 输入框圆角系数 */
-  --ice-input-radius: 12px;
-  /* 列表项圆角系数 */
-  --ice-item-radius: 6px;
-  /* 组件窗口圆角系数 */
-  --ice-widget-radius: 14px;
+  --ice-input-radius: 16px;
   /* 面板/弹窗圆角系数 */
-  --ice-panel-radius: 24px;
+  --ice-panel-radius: 16px;
   /* 面板/弹窗间距 */
   --ice-panel-gap: 6px;
   /* 浮岛边框配置 */
@@ -34,4 +30,12 @@
   --vscode-font-family:
     var(--ice-font-x), var(--ice-font-zh), -apple-system, BlinkMacSystemFont,
     PingFang SC, Hiragino Sans GB, sans-serif;
+
+
+
+  --vscode-cornerRadius-medium: calc(var(--ice-input-radius) / 2);
+  --vscode-cornerRadius-xSmall: calc(var(--ice-input-radius) / 2);
+  --vscode-cornerRadius-small: var(--ice-input-radius);
+  --vscode-cornerRadius-large: var(--ice-panel-radius);
+  --vscode-cornerRadius-xLarge: calc(var(--ice-panel-radius) * 2);
 }
