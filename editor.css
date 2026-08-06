@@ -88,6 +88,11 @@
       }
     }
 
+    /* tab - 面包屑 */
+    .breadcrumbs-below-tabs {
+      width: 100% !important;
+    }
+
     /* 编辑区装订线 */
     .monaco-editor [class*="ced-"][class*="-TextEditorDecorationType"] {
       text-decoration: none;
