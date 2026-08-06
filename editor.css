@@ -59,8 +59,26 @@
         }
 
         .tab {
+          align-items: center;
+
           .label-name {
             text-transform: uppercase;
+            transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+          }
+        }
+
+        .tab-actions {
+          .action-label {
+            justify-content: center;
+
+            &::before {
+              font-size: 14px;
+            }
+
+            &.codicon-close::before {
+              font-size: 12px;
+            }
+
           }
         }
       }

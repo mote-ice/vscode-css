@@ -240,3 +240,25 @@
     }
   }
 }
+
+/* ================================================================
+ * 简易过渡效果
+ * ================================================================ */
+/* 文本 */
+.monaco-icon-label {
+  &>.monaco-icon-label-container {
+    &>.monaco-icon-name-container {
+      &>.label-name {
+        transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+      }
+    }
+  }
+}
+
+/* 列表背景 */
+.monaco-list.mouse-support {
+  .monaco-list-row {
+    outline: none !important;
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
+}
