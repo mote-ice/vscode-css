@@ -72,7 +72,7 @@
             justify-content: center;
 
             &::before {
-              font-size: 14px;
+              font-size: 18px;
             }
 
             &.codicon-close::before {

@@ -258,7 +258,7 @@
 /* 列表背景 */
 .monaco-list.mouse-support {
   .monaco-list-row {
-    outline: none !important;
+    outline-color: transparent !important;
     transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   }
 }
