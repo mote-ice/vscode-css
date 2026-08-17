@@ -88,7 +88,7 @@ brew install --cask font-maple-mono-nf-cn
 
 ## 文件结构
 
-```
+```tree
 custom_css/
 ├── index.css          # 入口文件，汇总所有样式
 ├── vars.css           # CSS 变量定义（字体、圆角、间距、边框、阴影）

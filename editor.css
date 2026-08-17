@@ -25,6 +25,14 @@
       }
     }
 
+    .monaco-split-view2.horizontal {
+      >.monaco-scrollable-element {
+        >.split-view-container>.split-view-view {
+          width: 100% !important;
+        }
+      }
+    }
+
     /* 编辑区浮层 */
     .monaco-resizable-hover {
       border: var(--ice-islands-border-width) var(--ice-islands-border-style);
@@ -96,6 +104,12 @@
     /* 编辑区装订线 */
     .monaco-editor [class*="ced-"][class*="-TextEditorDecorationType"] {
       text-decoration: none;
+    }
+
+    .breadcrumbs-control.with-editor-type {
+      >.breadcrumbs-editor-type {
+        padding: 0 8px;
+      }
     }
   }
 }
