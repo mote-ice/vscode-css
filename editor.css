@@ -25,6 +25,13 @@
       }
     }
 
+    .monaco-breadcrumbs,
+    .invisible.scrollbar.horizontal,
+    .editor-container,
+    .editor-container .multiDiffEntry {
+      width: 100% !important;
+    }
+
     .monaco-split-view2.horizontal {
       >.monaco-scrollable-element {
         >.split-view-container>.split-view-view {
