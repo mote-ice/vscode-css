@@ -188,7 +188,7 @@
     font-size: 14px;
 
     transform: rotate(45deg);
-    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   }
 
   /* ================================================================
@@ -250,7 +250,7 @@
   &>.monaco-icon-label-container {
     &>.monaco-icon-name-container {
       &>.label-name {
-        transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+        transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
       }
     }
   }
@@ -260,6 +260,6 @@
 .monaco-list.mouse-support {
   .monaco-list-row {
     outline-color: transparent !important;
-    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
   }
 }
