@@ -1,23 +1,8 @@
 /* ================================================================
  * 编辑器左侧导航栏
  * ================================================================ */
-.part.sidebar.left {
-  .content {
-
-    .pane-header.actions-always-visible,
-    .pane-header.extension-view-header {
-      padding: 0 0 0 var(--ice-panel-gap);
-      border-radius: var(--ice-panel-radius);
-      border: unset !important;
-      background-color: var(--vscode-input-background) !important;
-
-      &::before {
-        background-color: transparent;
-      }
-    }
-
-    .suggest-input-container {
-      border-radius: var(--vscode-cornerRadius-small);
-    }
+.monaco-workbench.floating-panels:not(.noactivitybar) {
+  .part.sidebar.left {
+    height: calc(100% - var(--ice-panel-gap)) !important;
   }
 }

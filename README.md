@@ -91,7 +91,7 @@ brew install --cask font-maple-mono-nf-cn
 ```
 custom_css/
 ├── index.css          # 入口文件，汇总所有样式
-├── vars.css           # CSS 变量定义（字体、圆角、间距、边框、阴影）
+├── vars.css           # CSS 变量定义（字体、圆角、间距）
 ├── basic.css          # 全局基础样式（滚动条、输入框、下拉框、命令面板、通知等）
 ├── activitybar.css    # 左侧活动栏样式
 ├── sidebar.css        # 左侧导航栏样式
@@ -111,13 +111,9 @@ custom_css/
 通过修改 `vars.css` 中的 CSS 变量可以调整整体风格：
 
 ```css
---ice-input-radius: 12px;     /* 输入框圆角 */
---ice-item-radius: 6px;       /* 列表项圆角 */
---ice-widget-radius: 14px;    /* 组件窗口圆角 */
---ice-panel-radius: 24px;     /* 面板圆角 */
---ice-panel-gap: 6px;         /* 面板间距 */
---ice-user-avatar: none;      /* 用户头像，默认为 none */
---ice-islands-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);  /* 浮岛阴影 */
+--ice-radius: 16px;      /* 统一圆角系数，派生各级 --vscode-cornerRadius-* */
+--ice-panel-gap: 6px;    /* 面板间距 / 浮动面板边距 */
+--ice-user-avatar: none; /* 用户头像，默认为 none */
 ```
 
 ### 本地覆盖（推荐）

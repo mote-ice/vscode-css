@@ -1,98 +1,6 @@
-.monaco-workbench {
+.monaco-workbench.floating-panels {
   font-family: var(--vscode-font-family) !important;
   background-color: var(--vscode-titleBar-activeBackground) !important;
-
-  /* ================================================================
-   * 滚动条
-   * ================================================================ */
-  .scrollbar.vertical {
-
-    .slider {
-      width: var(--ice-panel-gap) !important;
-      border-radius: 9999px !important;
-    }
-  }
-
-  .scrollbar.horizontal {
-
-    .slider {
-      height: var(--ice-panel-gap) !important;
-      border-radius: 9999px !important;
-    }
-  }
-
-  /* ================================================================
-   * 列表
-   * ================================================================ */
-
-  .part.sidebar.left,
-  .part.auxiliarybar.right {
-
-    /* 插件市场列表 */
-    .monaco-list-row[role="listitem"] {
-
-      .extension-icon {
-
-        .icon {
-          padding-right: 0;
-
-          border: 1px solid currentColor;
-          border-radius: 999px;
-
-          object-fit: cover;
-        }
-      }
-    }
-  }
-
-  /* ================================================================
-   * 窗口顶部命令框
-   * ================================================================ */
-  .action-item.command-center-center {
-    border-radius: var(--ice-input-radius) !important;
-    text-transform: uppercase;
-  }
-
-  /* ================================================================
-   * 命令面板弹窗
-   * ================================================================ */
-  .quick-input-widget {
-    border-radius: var(--vscode-cornerRadius-large);
-    overflow: hidden;
-
-    &::before {
-      position: fixed;
-      inset: 0;
-      background-color: rgb(from var(--vscode-titleBar-activeBackground) r g b / 10%);
-      backdrop-filter: blur(2px);
-
-      content: "";
-    }
-  }
-
-  /* ================================================================
-    * 设置面板弹窗
-    * ================================================================ */
-  .monaco-modal-editor-block {
-    background-color: rgb(from var(--vscode-titleBar-activeBackground) r g b / 10%);
-    backdrop-filter: blur(2px);
-  }
-
-  /* ================================================================
-   * 树形展开图标
-   * ================================================================ */
-  .monaco-tl-twistie.collapsed:before {
-    transform: rotate(0deg);
-  }
-
-  .codicon-tree-item-expanded:before {
-    content: var(--vscode-icon-arrow-right-content);
-    font-weight: 900;
-    font-size: 14px;
-
-    transform: rotate(45deg);
-    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
-  }
 
   /* ================================================================
    * 颜色面板（Color Highlight 插件）
@@ -103,23 +11,33 @@
     line-height: 0.7em;
     border-radius: 50%;
   }
-}
 
-/* ================================================================
- * 编辑器底部状态栏
- * ================================================================ */
-.part.statusbar {
-  background-color: transparent !important;
+  /* ================================================================
+   * 编辑器底部状态栏
+   * ================================================================ */
+  .part.statusbar {
+    padding-left: calc(var(--ice-panel-gap) + 2px) !important;
+    padding-right: calc(var(--ice-panel-gap) + 2px) !important;
+    margin-top: calc(var(--ice-panel-gap) / 2 * -1);
+    background-color: transparent !important;
+    box-shadow: none !important;
 
-  .items-container>.statusbar-item[aria-label="remote"] {
-    min-width: 52px;
+    .items-container > .statusbar-item[aria-label="remote"] {
+      min-width: 52px;
 
-    color: var(--vscode-statusBarItem-remoteForeground, --vscode-button-foreground);
-    background-color: var(--vscode-statusBarItem-remoteBackground, --vscode-button-background);
+      color: var(
+        --vscode-statusBarItem-remoteForeground,
+        --vscode-button-foreground
+      );
+      background-color: var(
+        --vscode-statusBarItem-remoteBackground,
+        --vscode-button-background
+      );
 
-    .statusbar-item-label {
-      justify-content: center;
-      margin: 0;
+      .statusbar-item-label {
+        justify-content: center;
+        margin: 0;
+      }
     }
   }
 }

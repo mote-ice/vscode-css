@@ -1,22 +1,31 @@
 /* ================================================================
  * 编辑器主体区域
  * ================================================================ */
-.part.editor {
-  .content {
-    /* tab */
-    .tabs-and-actions-container {
-      .tabs-container {
-        .tab {
-          .label-name {
-            text-transform: uppercase;
+.monaco-workbench.floating-panels {
+  .part.editor {
+    .content {
+      width: 100% !important;
+
+      /* tab */
+      .tabs-and-actions-container {
+        .tabs-container {
+          .tab {
+            .label-name {
+              text-transform: uppercase;
+            }
           }
         }
       }
-    }
 
-    /* 编辑区装订线 */
-    .monaco-editor [class*="ced-"][class*="-TextEditorDecorationType"] {
-      text-decoration: none;
+      .breadcrumbs-below-tabs,
+      .monaco-breadcrumbs {
+        width: 100% !important;
+      }
+
+      /* 编辑区装订线 */
+      .monaco-editor [class*="ced-"][class*="-TextEditorDecorationType"] {
+        text-decoration: none;
+      }
     }
   }
 }

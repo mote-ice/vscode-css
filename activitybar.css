@@ -1,6 +1,32 @@
 /* ================================================================
  * 编辑器左侧活动栏
  * ================================================================ */
-/* .part.activitybar.left {
+.monaco-workbench.floating-panels {
+  .part.activitybar {
+    &.left {
+      border-color: var(--vscode-titleBar-activeBackground) !important;
 
-} */
+      &::after {
+        position: absolute;
+        top: var(--ice-panel-gap);
+        right: 0;
+        bottom: calc(var(--ice-panel-gap) * 2);
+        width: 1px;
+        background-color: var(--vscode-titleBar-activeBackground);
+        content: '';
+        opacity: 0.8;
+      }
+
+      .content {
+        --activity-bar-icon-size: 20px;
+
+        margin-left: -2px;
+      }
+    }
+
+    &>.content {
+      padding: var(--ice-panel-gap) 0;
+      box-sizing: border-box;
+    }
+  }
+}

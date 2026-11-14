@@ -11,18 +11,10 @@
   --ice-font-k: "Monaspace Krypton";
   /* 中文字体 */
   --ice-font-zh: "Maple Mono NF CN";
-  /* 输入框圆角系数 */
-  --ice-input-radius: 16px;
-  /* 面板/弹窗圆角系数 */
-  --ice-panel-radius: 16px;
+  /* 圆角系数 */
+  --ice-radius: 16px;
   /* 面板/弹窗间距 */
   --ice-panel-gap: 6px;
-  /* 浮岛边框配置 */
-  --ice-islands-border-width: 1px;
-  --ice-islands-border-style: solid;
-  --ice-islands-border-color: rgba(255, 255, 255, 0.12) rgba(255, 255, 255, 0.03) rgba(255, 255, 255, 0.03) rgba(255, 255, 255, 0.08);
-  /* 浮岛阴影 */
-  --ice-islands-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 
   /* 用户头像（默认为 none，用户可在本地覆盖） */
   --ice-user-avatar: none;
@@ -31,11 +23,14 @@
     var(--ice-font-x), var(--ice-font-zh), -apple-system, BlinkMacSystemFont,
     PingFang SC, Hiragino Sans GB, sans-serif;
 
+  --vscode-cornerRadius-medium: calc(var(--ice-radius) / 2);
+  --vscode-cornerRadius-xSmall: calc(var(--ice-radius) / 2);
+  --vscode-cornerRadius-small: var(--ice-radius);
+  --vscode-cornerRadius-large: var(--ice-radius);
+  --vscode-cornerRadius-xLarge: calc(var(--ice-radius) * 2);
 
-
-  --vscode-cornerRadius-medium: calc(var(--ice-input-radius) / 2);
-  --vscode-cornerRadius-xSmall: calc(var(--ice-input-radius) / 2);
-  --vscode-cornerRadius-small: var(--ice-input-radius);
-  --vscode-cornerRadius-large: var(--ice-panel-radius);
-  --vscode-cornerRadius-xLarge: calc(var(--ice-panel-radius) * 2);
+  &.monaco-workbench.floating-panels {
+    --modern-ui-floating-card-margin: var(--ice-panel-gap);
+    --modern-ui-floating-card-outer-margin: var(--ice-panel-gap);
+  }
 }

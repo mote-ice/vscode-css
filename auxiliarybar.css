@@ -1,17 +1,8 @@
 /* ================================================================
  * 编辑器右侧辅助栏
  * ================================================================ */
-.part.auxiliarybar.right {
-  .content {
-    .pane-header.actions-always-visible {
-      padding: 0 0 0 var(--ice-panel-gap);
-      border-radius: var(--ice-panel-radius);
-      border: unset !important;
-      background-color: var(--vscode-input-background) !important;
-
-      &::before {
-        background-color: transparent;
-      }
-    }
+.monaco-workbench.floating-panels {
+  .part.auxiliarybar>.content {
+    width: 100% !important;
   }
 }
