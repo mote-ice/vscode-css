@@ -18,9 +18,9 @@
   /* 组件窗口圆角系数 */
   --ice-widget-radius: 14px;
   /* 面板/弹窗圆角系数 */
-  --ice-panel-radius: 24px;
+  --ice-panel-radius: 16px;
   /* 面板/弹窗间距 */
-  --ice-panel-gap: 6px;
+  --ice-panel-gap: 4px;
   /* 浮岛边框配置 */
   --ice-islands-border-width: 1px;
   --ice-islands-border-style: solid;
