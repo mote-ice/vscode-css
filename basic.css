@@ -9,7 +9,7 @@
 
     .slider {
       left: 4px !important;
-      width: var(--ice-panel-gap) !important;
+      width: 6px !important;
       border-radius: 9999px !important;
     }
   }
@@ -18,7 +18,7 @@
 
     .slider {
       top: 4px !important;
-      height: var(--ice-panel-gap) !important;
+      height: 6px !important;
       border-radius: 9999px !important;
     }
   }
