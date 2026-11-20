@@ -8,7 +8,8 @@
   .scrollbar.vertical {
 
     .slider {
-      left: 4px !important;
+      left: unset !important;
+      right: 0 !important;
       width: 6px !important;
       border-radius: 9999px !important;
     }

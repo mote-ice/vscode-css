@@ -50,9 +50,7 @@
 
     /* 编辑区滚动条 */
     .editor-scrollable>.scrollbar.vertical {
-      height: calc(100% - var(--ice-panel-radius)) !important;
-      border-radius: 9999px !important;
-      overflow: hidden;
+      border-radius: 0 !important;
 
       .slider {
         transform: translate3d(0, calc(var(--ice-panel-radius) * -1), 0) !important;
